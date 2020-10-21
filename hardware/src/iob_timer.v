@@ -28,7 +28,7 @@ module iob_timer (
    	rst_soft_en = 1'b0;
    	tmp_reg_en = 1'b0;
         rdata = 32'b0;
-   	if(valid)
+   	if(ready)
    	  case (address)
    	    `TIMER_RESET:     rst_soft_en = 1'b1;
    	    `TIMER_STOP:      tmp_reg_en = 1'b1;
